@@ -1,3 +1,13 @@
+For JWT TOKEN NOT GETTING EXPIRED - 
+USE THIS SYNTAX
+
+jwt.sign({
+<!-- 1 hr of expiration , for testing take 60 seconds -->
+  exp: Math.floor(Date.now() / 1000) + (60 * 60),
+  data: 'foobar'
+}, 'secret');
+Forked and tested on local it is working fine
+
 # Plutonium
 
 ## Project - Books Management
